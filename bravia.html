@@ -27,76 +27,79 @@
 
     </style>
     <div class="container-fluid">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <table style="background: #FF8A80;">
+              <tr>
+              <th>Power</th>
+              </tr>
+              <tr>
+              <td><button type="button" class="action btn btn-block btn-info" id="PictureOff"><span class="glyphicon glyphicon-picture" aria-hidden="true"></span> PictureOff</button></td>
+              <td colspan="2"><button type="button" class="action btn btn-block btn-danger" id="TvPower"><span class="glyphicon glyphicon-off" aria-hidden="true"></span> TvPower</button></td>
+              </tr>
+          </table>
 
-      <table style="background: #FF8A80;">
-        <tr>
-          <th>Power</th>
-        </tr>
-        <tr>
-          <td><button type="button" class="action btn btn-block btn-info" id="PictureOff"><span class="glyphicon glyphicon-picture" aria-hidden="true"></span> PictureOff</button></td>
-          <td colspan="2"><button type="button" class="action btn btn-block btn-danger" id="TvPower"><span class="glyphicon glyphicon-off" aria-hidden="true"></span> TvPower</button></td>
-        </tr>
-      </table>
+          <table style="background: #CCFF90;">
+              <tr>
+              <th>Dpad</th>
+              </tr>
+              <tr>
+              <td></td>
+              <td><button type="button" class="action btn btn-block" id="CursorUp"><span class="glyphicon glyphicon-triangle-top" aria-hidden="true"></span></button></td>
+              <td></td>
+              </tr>
+              <tr>
+              <td><button type="button" class="action btn btn-block" id="CursorLeft"><span class="glyphicon glyphicon-triangle-left" aria-hidden="true"></span></button></td>
+              <td><button type="button" class="action btn btn-block btn-success" id="DpadCenter"><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span></button></td>
+              <td><button type="button" class="action btn btn-block" id="CursorRight"><span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span></button></td>
+              </tr>
+              <tr>
+              <td><button type="button" class="action btn btn-block btn-warning" id="Return"><span class="glyphicon glyphicon-eject" aria-hidden="true"></span> Return</button></td>
+              <td><button type="button" class="action btn btn-block" id="CursorDown"><span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span></button></td>
+              <td></td>
+              </tr>
+          </table>
 
-      <table style="background: #CCFF90;">
-        <tr>
-          <th>Dpad</th>
-        </tr>
-        <tr>
-          <td></td>
-          <td><button type="button" class="action btn btn-block" id="CursorUp"><span class="glyphicon glyphicon-triangle-top" aria-hidden="true"></span></button></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td><button type="button" class="action btn btn-block" id="CursorLeft"><span class="glyphicon glyphicon-triangle-left" aria-hidden="true"></span></button></td>
-          <td><button type="button" class="action btn btn-block btn-success" id="DpadCenter"><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span></button></td>
-          <td><button type="button" class="action btn btn-block" id="CursorRight"><span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span></button></td>
-        </tr>
-        <tr>
-          <td><button type="button" class="action btn btn-block btn-warning" id="Return"><span class="glyphicon glyphicon-eject" aria-hidden="true"></span> Return</button></td>
-          <td><button type="button" class="action btn btn-block" id="CursorDown"><span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span></button></td>
-          <td></td>
-        </tr>
-      </table>
+          <table style="background: #8C9EFF;">
+              <tr>
+              <th>Volume</th>
+              </tr>
+              <tr>
+              <td><button type="button" class="action btn btn-block" id="VolumeDown"><span class="glyphicon glyphicon-volume-down" aria-hidden="true"></span></button></td>
+              <td><button type="button" class="action btn btn-block btn-danger" id="Mute"><span class="glyphicon glyphicon-volume-off" aria-hidden="true"></span></button></td>
+              <td><button type="button" class="action btn btn-block" id="VolumeUp"><span class="glyphicon glyphicon-volume-up" aria-hidden="true"></span></button></td>
+              </tr>
+          </table>
 
-      <table style="background: #8C9EFF;">
-        <tr>
-          <th>Volume</th>
-        </tr>
-        <tr>
-          <td><button type="button" class="action btn btn-block" id="VolumeDown"><span class="glyphicon glyphicon-volume-down" aria-hidden="true"></span></button></td>
-          <td><button type="button" class="action btn btn-block btn-danger" id="Mute"><span class="glyphicon glyphicon-volume-off" aria-hidden="true"></span></button></td>
-          <td><button type="button" class="action btn btn-block" id="VolumeUp"><span class="glyphicon glyphicon-volume-up" aria-hidden="true"></span></button></td>
-        </tr>
-      </table>
+          <table style="background: #FFE57F;">
+              <tr>
+              <th>Player</th>
+              </tr>
+              <tr>
+              <td><button type="button" class="action btn btn-block" id="Rewind"><span class="glyphicon glyphicon-backward" aria-hidden="true"></span></button></td>
+              <td><button type="button" class="action btn btn-block" id="Play"><span class="glyphicon glyphicon-play" aria-hidden="true"></span></button></td>
+              <td><button type="button" class="action btn btn-block" id="Forward"><span class="glyphicon glyphicon-forward" aria-hidden="true"></span></button></td>
+              </tr>
+              <tr>
+              <td><button type="button" class="action btn btn-block" id="Prev"><span class="glyphicon glyphicon-step-backward" aria-hidden="true"></span></button></td>
+              <td><button type="button" class="action btn btn-block" id="Pause"><span class="glyphicon glyphicon-pause" aria-hidden="true"></span></button></td>
+              <td><button type="button" class="action btn btn-block" id="Next"><span class="glyphicon glyphicon-step-forward" aria-hidden="true"></span></button></td>
+              </tr>
+          </table>
 
-      <table style="background: #FFE57F;">
-        <tr>
-          <th>Player</th>
-        </tr>
-        <tr>
-          <td><button type="button" class="action btn btn-block" id="Rewind"><span class="glyphicon glyphicon-backward" aria-hidden="true"></span></button></td>
-          <td><button type="button" class="action btn btn-block" id="Play"><span class="glyphicon glyphicon-play" aria-hidden="true"></span></button></td>
-          <td><button type="button" class="action btn btn-block" id="Forward"><span class="glyphicon glyphicon-forward" aria-hidden="true"></span></button></td>
-        </tr>
-        <tr>
-          <td><button type="button" class="action btn btn-block" id="Prev"><span class="glyphicon glyphicon-step-backward" aria-hidden="true"></span></button></td>
-          <td><button type="button" class="action btn btn-block" id="Pause"><span class="glyphicon glyphicon-pause" aria-hidden="true"></span></button></td>
-          <td><button type="button" class="action btn btn-block" id="Next"><span class="glyphicon glyphicon-step-forward" aria-hidden="true"></span></button></td>
-        </tr>
-      </table>
-
-      <table style="background: #EA80FC;">
-        <tr>
-          <th>Input</th>
-        </tr>
-        <tr>
-          <td><button type="button" class="action btn btn-block" id="Hdmi1">HDMI 1</button></td>
-          <td><button type="button" class="action btn btn-block" id="Hdmi2">HDMI 2</button></td>
-          <td><button type="button" class="action btn btn-block" id="Hdmi3">HDMI 3</button></td>
-          <td><button type="button" class="action btn btn-block" id="Hdmi4">HDMI 4</button></td>
-        </tr>
-      </table>
+          <table style="background: #EA80FC;">
+              <tr>
+              <th>Input</th>
+              </tr>
+              <tr>
+              <td><button type="button" class="action btn btn-block" id="Hdmi1">HDMI 1</button></td>
+              <td><button type="button" class="action btn btn-block" id="Hdmi2">HDMI 2</button></td>
+              <td><button type="button" class="action btn btn-block" id="Hdmi3">HDMI 3</button></td>
+              <td><button type="button" class="action btn btn-block" id="Hdmi4">HDMI 4</button></td>
+              </tr>
+          </table>
+        </div>
+      </div>
 
       <div class="panel panel-default">
         <div class="panel-heading" role="tab" id="AllButtons">
@@ -153,7 +156,7 @@
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="http://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="http://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>   
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <script>
       function setCookie(cname, cvalue, exdays) {
