@@ -15,63 +15,97 @@
     <style>
       table {
         width: 100%;
+        table-layout:fixed;
       }
-      td {
-        background: orange;
+      td, th {
         padding: 10px;
       }
 
+
     </style>
     <div class="container-fluid">
-      <button type="button" class="action btn btn-success" id="PowerOn"><span class="glyphicon glyphicon-off" aria-hidden="true"></span></button>
-      <button type="button" class="action btn btn-danger" id="PowerOff"><span class="glyphicon glyphicon-off" aria-hidden="true"></span></button>
-      <button type="button" class="action btn btn-danger" id="TvPower"><span class="glyphicon glyphicon-off" aria-hidden="true"></span></button>
-      <button type="button" class="action btn" id="VolumeDown"><span class="glyphicon glyphicon-volume-down" aria-hidden="true"></span></button>
-      <button type="button" class="action btn" id="Mute"><span class="glyphicon glyphicon-volume-off" aria-hidden="true"></span></button>
-      <button type="button" class="action btn" id="VolumeUp"><span class="glyphicon glyphicon-volume-up" aria-hidden="true"></span></button>
-      <button type="button" class="action btn" id="Left"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span></button>
-      <button type="button" class="action btn" id="Right"><span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span></button>
-      <button type="button" class="action btn" id="Up"><span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span></button>
-      <button type="button" class="action btn" id="Down"><span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span></button>
-      <button type="button" class="action btn" id="Enter"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></button>
-      <button type="button" class="action btn" id="Confirm"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></button>
-      <button type="button" class="action btn" id="Exit"><span class="glyphicon glyphicon-eject" aria-hidden="true"></span></button>
-      <button type="button" class="action btn" id="Return"><span class="glyphicon glyphicon-eject" aria-hidden="true"></span></button>
-      <button type="button" class="action btn" id="PictureOff"><span class="glyphicon glyphicon-picture" aria-hidden="true"></span></button>
-      <button type="button" class="action btn" id="Play"><span class="glyphicon glyphicon-play" aria-hidden="true"></span></button>
-      <button type="button" class="action btn" id="Pause"><span class="glyphicon glyphicon-pause" aria-hidden="true"></span></button>
-      <button type="button" class="action btn" id="Rewind"><span class="glyphicon glyphicon-backward" aria-hidden="true"></span></button>
-      <button type="button" class="action btn" id="Forward"><span class="glyphicon glyphicon-forward" aria-hidden="true"></span></button>
-      <button type="button" class="action btn" id="CursorLeft"><span class="glyphicon glyphicon-triangle-left" aria-hidden="true"></span></button>
-      <button type="button" class="action btn" id="CursorRight"><span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span></button>
-      <button type="button" class="action btn" id="CursorUp"><span class="glyphicon glyphicon-triangle-top" aria-hidden="true"></span></button>
-      <button type="button" class="action btn" id="CursorDown"><span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span></button>
-      <button type="button" class="action btn" id="DpadCenter"><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span></button>
-      <button type="button" class="action btn" id="Hdmi1">HDMI 1</button>
-      <button type="button" class="action btn" id="Hdmi2">HDMI 2</button>
-      <button type="button" class="action btn" id="Hdmi3">HDMI 3</button>
-      <button type="button" class="action btn" id="Hdmi4">HDMI 4</button>
-      <button type="button" class="action btn" id="TopMenu">TopMenu</button>
-      <button type="button" class="action btn" id="PopUpMenu">PopUpMenu</button>
-      <button type="button" class="action btn" id="ActionMenu">ActionMenu</button>
 
-      <table>
+      <table style="background: #FF8A80;">
         <tr>
-          <td><button type="button" class="action btn btn-block btn-success" id="PowerOn"><span class="glyphicon glyphicon-off" aria-hidden="true"></span></button></td>
-          <td><button type="button" class="action btn btn-block btn-danger" id="PowerOff"><span class="glyphicon glyphicon-off" aria-hidden="true"></span></button></td> 
-          <td><button type="button" class="action btn btn-block btn-danger" id="TvPower"><span class="glyphicon glyphicon-off" aria-hidden="true"></span></button></td>
+          <th>Power</th>
         </tr>
         <tr>
-          <td>Jill</td>
-          <td>Smith</td> 
-          <td>50</td>
-        </tr>
-        <tr>
-          <td>Eve</td>
-          <td>Jackson</td> 
-          <td>94</td>
+          <td><button type="button" class="action btn btn-block btn-info" id="PictureOff"><span class="glyphicon glyphicon-picture" aria-hidden="true"></span> PictureOff</button></td>
+          <td colspan="2"><button type="button" class="action btn btn-block btn-danger" id="TvPower"><span class="glyphicon glyphicon-off" aria-hidden="true"></span> TvPower</button></td>
         </tr>
       </table>
+
+      <table style="background: #CCFF90;">
+        <tr>
+          <th>Dpad</th>
+        </tr>
+        <tr>
+          <td></td>
+          <td><button type="button" class="action btn btn-block" id="CursorUp"><span class="glyphicon glyphicon-triangle-top" aria-hidden="true"></span></button></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><button type="button" class="action btn btn-block" id="CursorLeft"><span class="glyphicon glyphicon-triangle-left" aria-hidden="true"></span></button></td>
+          <td><button type="button" class="action btn btn-block btn-success" id="DpadCenter"><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span></button></td>
+          <td><button type="button" class="action btn btn-block" id="CursorRight"><span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span></button></td>
+        </tr>
+        <tr>
+          <td><button type="button" class="action btn btn-block btn-warning" id="Return"><span class="glyphicon glyphicon-eject" aria-hidden="true"></span> Return</button></td>
+          <td><button type="button" class="action btn btn-block" id="CursorDown"><span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span></button></td>
+          <td></td>
+        </tr>
+      </table>
+
+      <table style="background: #8C9EFF;">
+        <tr>
+          <th>Volume</th>
+        </tr>
+        <tr>
+          <td><button type="button" class="action btn btn-block" id="VolumeDown"><span class="glyphicon glyphicon-volume-down" aria-hidden="true"></span></button></td>
+          <td><button type="button" class="action btn btn-block btn-danger" id="Mute"><span class="glyphicon glyphicon-volume-off" aria-hidden="true"></span></button></td>
+          <td><button type="button" class="action btn btn-block" id="VolumeUp"><span class="glyphicon glyphicon-volume-up" aria-hidden="true"></span></button></td>
+        </tr>
+      </table>
+
+      <table style="background: #FFE57F;">
+        <tr>
+          <th>Player</th>
+        </tr>
+        <tr>
+          <td><button type="button" class="action btn btn-block" id="Rewind"><span class="glyphicon glyphicon-backward" aria-hidden="true"></span></button></td>
+          <td><button type="button" class="action btn btn-block" id="Play"><span class="glyphicon glyphicon-play" aria-hidden="true"></span></button></td>
+          <td><button type="button" class="action btn btn-block" id="Forward"><span class="glyphicon glyphicon-forward" aria-hidden="true"></span></button></td>
+        </tr>
+        <tr>
+          <td><button type="button" class="action btn btn-block" id="Prev"><span class="glyphicon glyphicon-step-backward" aria-hidden="true"></span></button></td>
+          <td><button type="button" class="action btn btn-block" id="Pause"><span class="glyphicon glyphicon-pause" aria-hidden="true"></span></button></td>
+          <td><button type="button" class="action btn btn-block" id="Next"><span class="glyphicon glyphicon-step-forward" aria-hidden="true"></span></button></td>
+        </tr>
+      </table>
+
+      <table style="background: #EA80FC;">
+        <tr>
+          <th>Input</th>
+        </tr>
+        <tr>
+          <td><button type="button" class="action btn btn-block" id="Hdmi1">HDMI 1</button></td>
+          <td><button type="button" class="action btn btn-block" id="Hdmi2">HDMI 2</button></td>
+          <td><button type="button" class="action btn btn-block" id="Hdmi3">HDMI 3</button></td>
+          <td><button type="button" class="action btn btn-block" id="Hdmi4">HDMI 4</button></td>
+        </tr>
+      </table>
+
+      <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="AllButtons">
+          <h4 class="panel-title">
+            <button type="button" class="btn btn-block" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" aria-expanded="false">All Buttons</button>
+          </h4>
+        </div>
+        <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="AllButtons">
+          <div class="panel-body" id="ButtonList">
+          </div>
+        </div>
+      </div>
 
       <div class="panel panel-default">
         <div class="panel-heading">Config</div>
@@ -79,22 +113,34 @@
           <div class="input-group">
             <span class="input-group-addon" id="input-ip">IP: </span>
             <input type="text" class="form-control" id="IP" aria-describedby="input-ip">
-          </div>
-          <div class="input-group">
             <span class="input-group-addon" id="input-auth">AUTH: </span>
             <input type="text" class="form-control" id="AUTH" aria-describedby="input-auth">
+            <span class="input-group-btn">
+              <button class="btn btn-default" type="button" id="Save"><span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span> Save</button>
+            </span>
           </div>
-          <button type="button" class="btn btn-block btn-success" id="Save"><span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span></button>
         </div>
       </div>
 
       <div class="well">
-      TV Setup</br>
-      Turn on your TV</br>
-      On the TV go to Settings > Network > Home network setup > Remote device/Renderer > On</br>
-      On the TV go to Settings > Network > Home network setup > IP Control > Authentication > Normal and Pre-Shared Key</br>
-      On the TV go to Settings > Network > Home network setup > Remote device/Renderer > Enter Pre-Shared Key > 0000 (or whatever you want your PSK Key to be)</br>
-      On the TV go to Settings > Network > Home network setup > Remote device/Renderer > Simple IP Control > On</br>
+        TV Setup</br>
+        Turn on your TV</br>
+        On the TV go to Settings > Network > Home network setup > Remote device/Renderer > On</br>
+        On the TV go to Settings > Network > Home network setup > IP Control > Authentication > Normal and Pre-Shared Key</br>
+        On the TV go to Settings > Network > Home network setup > Remote device/Renderer > Enter Pre-Shared Key > 0000 (or whatever you want your PSK Key to be)</br>
+        On the TV go to Settings > Network > Home network setup > Remote device/Renderer > Simple IP Control > On</br>
+      </div>
+
+      <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="Debug">
+          <h4 class="panel-title">
+            <button type="button" class="btn btn-block" data-toggle="collapse" data-parent="#accordion" href="#DebugDiv" aria-expanded="true" aria-controls="DebugDiv" aria-expanded="false">Debug</button>
+          </h4>
+        </div>
+        <div id="DebugDiv" class="panel-collapse collapse" role="tabpanel" aria-labelledby="Debug">
+          <div class="panel-body" id="DebugText">
+          </div>
+        </div>
       </div>
 
     </div>
@@ -102,7 +148,7 @@
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="http://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <!-- <script src="http://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>   -->
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>   
 
     <script>
       function setCookie(cname, cvalue, exdays) {
@@ -127,6 +173,11 @@
         return "";
       }
 
+      function debug_add(text) {
+        var item = `<br>${text}</br>`;
+        $('#DebugText').append($(item));
+      };
+
       $(window).load(function () {
         var tv_ip = getCookie('tv_ip') || '192.168.77.5';
         var auth = getCookie('auth') || '0000';
@@ -134,9 +185,16 @@
         $('#IP').val(tv_ip);
         $('#AUTH').val(auth);
 
-        $('#Save').on('click touchend', function(event) {
-          setCookie('tv_ip', $('#IP').val(), 365)
-          setCookie('auth', $('#AUTH').val(), 365)
+        for (var action in action_map) {
+          var btn = `<button type="button" class="action btn" id="${action}">${action}</button>`
+          $('#ButtonList').append($(btn))
+        }
+
+        $('#Save').on('touchend', function(event) {
+          tv_ip = $('#IP').val();
+          auth = $('#AUTH').val();
+          setCookie('tv_ip', tv_ip, 365);
+          setCookie('auth', auth, 365);
         });
 
         $('button.action').on('touchstart', function(event) {
@@ -145,13 +203,19 @@
         $('button.action').on('touchmove', function(event) {
           documentClick = false;
         });
-        $('button.action').on('click touchend', function(event) {
+        $('button.action').on('touchend', function(event) {
           if (event.type == "click") documentClick = true;
           if (documentClick){
-            var action = this.id
-            console.log(action)
-            var IRCCCode = action_map[action]
-            console.log(IRCCCode)
+            var action = this.id;
+            console.log(action);
+            var IRCCCode = action_map[action];
+            console.log(IRCCCode);
+
+            $('#DebugText').empty();
+            debug_add('TV_IP: '+tv_ip);
+            debug_add('AUTH: '+auth);
+            debug_add('button: '+action);
+            debug_add('IRCCCode: '+IRCCCode);
 
             $.ajax({
               type: "POST",
@@ -165,10 +229,12 @@
               },
               timeout: 2000,
               success: function (data) {
-                console.log(data)
+                debug_add('TV Response: '+JSON.stringify(data));
+                console.log(data);
               },
               error: function (err) {
-                console.log(err)
+                debug_add('Error: '+JSON.stringify(err));
+                console.log(err);
               }
             });
           }
@@ -176,121 +242,123 @@
       })
 
       var action_map = {
-        PowerOn: 'AAAAAQAAAAEAAAAuAw==',
-        Num1: 'AAAAAQAAAAEAAAAAAw==',
-        Num2: 'AAAAAQAAAAEAAAABAw==',
-        Num3: 'AAAAAQAAAAEAAAACAw==',
-        Num4: 'AAAAAQAAAAEAAAADAw==',
-        Num5: 'AAAAAQAAAAEAAAAEAw==',
-        Num6: 'AAAAAQAAAAEAAAAFAw==',
-        Num7: 'AAAAAQAAAAEAAAAGAw==',
-        Num8: 'AAAAAQAAAAEAAAAHAw==',
-        Num9: 'AAAAAQAAAAEAAAAIAw==',
-        Num0: 'AAAAAQAAAAEAAAAJAw==',
-        Num11: 'AAAAAQAAAAEAAAAKAw==',
-        Num12: 'AAAAAQAAAAEAAAALAw==',
-        Enter: 'AAAAAQAAAAEAAAALAw==',
-        GGuide: 'AAAAAQAAAAEAAAAOAw==',
-        ChannelUp: 'AAAAAQAAAAEAAAAQAw==',
-        ChannelDown: 'AAAAAQAAAAEAAAARAw==',
-        VolumeUp: 'AAAAAQAAAAEAAAASAw==',
-        VolumeDown: 'AAAAAQAAAAEAAAATAw==',
-        Mute: 'AAAAAQAAAAEAAAAUAw==',
-        TvPower: 'AAAAAQAAAAEAAAAVAw==',
-        Audio: 'AAAAAQAAAAEAAAAXAw==',
-        MediaAudioTrack: 'AAAAAQAAAAEAAAAXAw==',
-        Tv: 'AAAAAQAAAAEAAAAkAw==',
-        Input: 'AAAAAQAAAAEAAAAlAw==',
-        TvInput: 'AAAAAQAAAAEAAAAlAw==',
-        TvAntennaCable: 'AAAAAQAAAAEAAAAqAw==',
-        WakeUp: 'AAAAAQAAAAEAAAAuAw==',
-        PowerOff: 'AAAAAQAAAAEAAAAvAw==',
-        Sleep: 'AAAAAQAAAAEAAAAvAw==',
-        Right: 'AAAAAQAAAAEAAAAzAw==',
-        Left: 'AAAAAQAAAAEAAAA0Aw==',
-        SleepTimer: 'AAAAAQAAAAEAAAA2Aw==',
-        Analog2: 'AAAAAQAAAAEAAAA4Aw==',
-        TvAnalog: 'AAAAAQAAAAEAAAA4Aw==',
-        Display: 'AAAAAQAAAAEAAAA6Aw==',
-        Jump: 'AAAAAQAAAAEAAAA7Aw==',
-        PicOff: 'AAAAAQAAAAEAAAA+Aw==',
-        PictureOff: 'AAAAAQAAAAEAAAA+Aw==',
-        Teletext: 'AAAAAQAAAAEAAAA/Aw==',
-        Video1: 'AAAAAQAAAAEAAABAAw==',
-        Video2: 'AAAAAQAAAAEAAABBAw==',
-        AnalogRgb1: 'AAAAAQAAAAEAAABDAw==',
-        Home: 'AAAAAQAAAAEAAABgAw==',
-        Exit: 'AAAAAQAAAAEAAABjAw==',
-        PictureMode: 'AAAAAQAAAAEAAABkAw==',
-        Confirm: 'AAAAAQAAAAEAAABlAw==',
-        Up: 'AAAAAQAAAAEAAAB0Aw==',
-        Down: 'AAAAAQAAAAEAAAB1Aw==',
-        ClosedCaption: 'AAAAAgAAAKQAAAAQAw==',
-        Component1: 'AAAAAgAAAKQAAAA2Aw==',
-        Component2: 'AAAAAgAAAKQAAAA3Aw==',
-        Wide: 'AAAAAgAAAKQAAAA9Aw==',
-        EPG: 'AAAAAgAAAKQAAABbAw==',
-        PAP: 'AAAAAgAAAKQAAAB3Aw==',
-        TenKey: 'AAAAAgAAAJcAAAAMAw==',
-        BSCS: 'AAAAAgAAAJcAAAAQAw==',
-        Ddata: 'AAAAAgAAAJcAAAAVAw==',
-        Stop: 'AAAAAgAAAJcAAAAYAw==',
-        Pause: 'AAAAAgAAAJcAAAAZAw==',
-        Play: 'AAAAAgAAAJcAAAAaAw==',
-        Rewind: 'AAAAAgAAAJcAAAAbAw==',
-        Forward: 'AAAAAgAAAJcAAAAcAw==',
-        DOT: 'AAAAAgAAAJcAAAAdAw==',
-        Rec: 'AAAAAgAAAJcAAAAgAw==',
-        Return: 'AAAAAgAAAJcAAAAjAw==',
-        Blue: 'AAAAAgAAAJcAAAAkAw==',
-        Red: 'AAAAAgAAAJcAAAAlAw==',
-        Green: 'AAAAAgAAAJcAAAAmAw==',
-        Yellow: 'AAAAAgAAAJcAAAAnAw==',
-        SubTitle: 'AAAAAgAAAJcAAAAoAw==',
-        CS: 'AAAAAgAAAJcAAAArAw==',
-        BS: 'AAAAAgAAAJcAAAAsAw==',
-        Digital: 'AAAAAgAAAJcAAAAyAw==',
-        Options: 'AAAAAgAAAJcAAAA2Aw==',
-        Media: 'AAAAAgAAAJcAAAA4Aw==',
-        Prev: 'AAAAAgAAAJcAAAA8Aw==',
-        Next: 'AAAAAgAAAJcAAAA9Aw==',
-        DpadCenter: 'AAAAAgAAAJcAAABKAw==',
-        CursorUp: 'AAAAAgAAAJcAAABPAw==',
-        CursorDown: 'AAAAAgAAAJcAAABQAw==',
-        CursorLeft: 'AAAAAgAAAJcAAABNAw==',
-        CursorRight: 'AAAAAgAAAJcAAABOAw==',
-        ShopRemoteControlForcedDynamic: 'AAAAAgAAAJcAAABqAw==',
-        FlashPlus: 'AAAAAgAAAJcAAAB4Aw==',
-        FlashMinus: 'AAAAAgAAAJcAAAB5Aw==',
-        AudioQualityMode: 'AAAAAgAAAJcAAAB7Aw==',
-        DemoMode: 'AAAAAgAAAJcAAAB8Aw==',
-        Analog: 'AAAAAgAAAHcAAAANAw==',
-        Mode3D: 'AAAAAgAAAHcAAABNAw==',
-        DigitalToggle: 'AAAAAgAAAHcAAABSAw==',
-        DemoSurround: 'AAAAAgAAAHcAAAB7Aw==',
+        'Num1': 'AAAAAQAAAAEAAAAAAw==',
+        'Num2': 'AAAAAQAAAAEAAAABAw==',
+        'Num3': 'AAAAAQAAAAEAAAACAw==',
+        'Num4': 'AAAAAQAAAAEAAAADAw==',
+        'Num5': 'AAAAAQAAAAEAAAAEAw==',
+        'Num6': 'AAAAAQAAAAEAAAAFAw==',
+        'Num7': 'AAAAAQAAAAEAAAAGAw==',
+        'Num8': 'AAAAAQAAAAEAAAAHAw==',
+        'Num9': 'AAAAAQAAAAEAAAAIAw==',
+        'Num0': 'AAAAAQAAAAEAAAAJAw==',
+        'Num11': 'AAAAAQAAAAEAAAAKAw==',
+        'Num12': 'AAAAAQAAAAEAAAALAw==',
+        'Enter': 'AAAAAQAAAAEAAAALAw==',
+        'GGuide': 'AAAAAQAAAAEAAAAOAw==',
+        'ChannelUp': 'AAAAAQAAAAEAAAAQAw==',
+        'ChannelDown': 'AAAAAQAAAAEAAAARAw==',
+        'VolumeUp': 'AAAAAQAAAAEAAAASAw==',
+        'VolumeDown': 'AAAAAQAAAAEAAAATAw==',
+        'Mute': 'AAAAAQAAAAEAAAAUAw==',
+        'TvPower': 'AAAAAQAAAAEAAAAVAw==',
+        'Audio': 'AAAAAQAAAAEAAAAXAw==',
+        'MediaAudioTrack': 'AAAAAQAAAAEAAAAXAw==',
+        'Tv': 'AAAAAQAAAAEAAAAkAw==',
+        'Input': 'AAAAAQAAAAEAAAAlAw==',
+        'TvInput': 'AAAAAQAAAAEAAAAlAw==',
+        'TvAntennaCable': 'AAAAAQAAAAEAAAAqAw==',
+        'WakeUp': 'AAAAAQAAAAEAAAAuAw==',
+        'PowerOff': 'AAAAAQAAAAEAAAAvAw==',
+        'Sleep': 'AAAAAQAAAAEAAAAvAw==',
+        'Right': 'AAAAAQAAAAEAAAAzAw==',
+        'Left': 'AAAAAQAAAAEAAAA0Aw==',
+        'SleepTimer': 'AAAAAQAAAAEAAAA2Aw==',
+        'Analog2': 'AAAAAQAAAAEAAAA4Aw==',
+        'TvAnalog': 'AAAAAQAAAAEAAAA4Aw==',
+        'Display': 'AAAAAQAAAAEAAAA6Aw==',
+        'Jump': 'AAAAAQAAAAEAAAA7Aw==',
+        'PicOff': 'AAAAAQAAAAEAAAA+Aw==',
+        'PictureOff': 'AAAAAQAAAAEAAAA+Aw==',
+        'Teletext': 'AAAAAQAAAAEAAAA\/Aw==',
+        'Video1': 'AAAAAQAAAAEAAABAAw==',
+        'Video2': 'AAAAAQAAAAEAAABBAw==',
+        'AnalogRgb1': 'AAAAAQAAAAEAAABDAw==',
+        'Home': 'AAAAAQAAAAEAAABgAw==',
+        'Exit': 'AAAAAQAAAAEAAABjAw==',
+        'PictureMode': 'AAAAAQAAAAEAAABkAw==',
+        'Confirm': 'AAAAAQAAAAEAAABlAw==',
+        'Up': 'AAAAAQAAAAEAAAB0Aw==',
+        'Down': 'AAAAAQAAAAEAAAB1Aw==',
+        'ClosedCaption': 'AAAAAgAAAKQAAAAQAw==',
+        'Component1': 'AAAAAgAAAKQAAAA2Aw==',
+        'Component2': 'AAAAAgAAAKQAAAA3Aw==',
+        'Wide': 'AAAAAgAAAKQAAAA9Aw==',
+        'EPG': 'AAAAAgAAAKQAAABbAw==',
+        'PAP': 'AAAAAgAAAKQAAAB3Aw==',
+        'TenKey': 'AAAAAgAAAJcAAAAMAw==',
+        'BSCS': 'AAAAAgAAAJcAAAAQAw==',
+        'Ddata': 'AAAAAgAAAJcAAAAVAw==',
+        'Stop': 'AAAAAgAAAJcAAAAYAw==',
+        'Pause': 'AAAAAgAAAJcAAAAZAw==',
+        'Play': 'AAAAAgAAAJcAAAAaAw==',
+        'Rewind': 'AAAAAgAAAJcAAAAbAw==',
+        'Forward': 'AAAAAgAAAJcAAAAcAw==',
+        'DOT': 'AAAAAgAAAJcAAAAdAw==',
+        'Rec': 'AAAAAgAAAJcAAAAgAw==',
+        'Return': 'AAAAAgAAAJcAAAAjAw==',
+        'Blue': 'AAAAAgAAAJcAAAAkAw==',
+        'Red': 'AAAAAgAAAJcAAAAlAw==',
+        'Green': 'AAAAAgAAAJcAAAAmAw==',
+        'Yellow': 'AAAAAgAAAJcAAAAnAw==',
+        'SubTitle': 'AAAAAgAAAJcAAAAoAw==',
+        'CS': 'AAAAAgAAAJcAAAArAw==',
+        'BS': 'AAAAAgAAAJcAAAAsAw==',
+        'Digital': 'AAAAAgAAAJcAAAAyAw==',
+        'Options': 'AAAAAgAAAJcAAAA2Aw==',
+        'Media': 'AAAAAgAAAJcAAAA4Aw==',
+        'Prev': 'AAAAAgAAAJcAAAA8Aw==',
+        'Next': 'AAAAAgAAAJcAAAA9Aw==',
+        'DpadCenter': 'AAAAAgAAAJcAAABKAw==',
+        'CursorUp': 'AAAAAgAAAJcAAABPAw==',
+        'CursorDown': 'AAAAAgAAAJcAAABQAw==',
+        'CursorLeft': 'AAAAAgAAAJcAAABNAw==',
+        'CursorRight': 'AAAAAgAAAJcAAABOAw==',
+        'ShopRemoteControlForcedDynamic': 'AAAAAgAAAJcAAABqAw==',
+        'FlashPlus': 'AAAAAgAAAJcAAAB4Aw==',
+        'FlashMinus': 'AAAAAgAAAJcAAAB5Aw==',
+        'AudioQualityMode': 'AAAAAgAAAJcAAAB7Aw==',
+        'DemoMode': 'AAAAAgAAAJcAAAB8Aw==',
+        'Analog': 'AAAAAgAAAHcAAAANAw==',
+        'Mode3D': 'AAAAAgAAAHcAAABNAw==',
+        'DigitalToggle': 'AAAAAgAAAHcAAABSAw==',
+        'DemoSurround': 'AAAAAgAAAHcAAAB7Aw==',
         '*AD': 'AAAAAgAAABoAAAA7Aw==',
-        AudioMixUp: 'AAAAAgAAABoAAAA8Aw==',
-        AudioMixDown: 'AAAAAgAAABoAAAA9Aw==',
-        PhotoFrame: 'AAAAAgAAABoAAABVAw==',
-        Tv_Radio: 'AAAAAgAAABoAAABXAw==',
-        SyncMenu: 'AAAAAgAAABoAAABYAw==',
-        Hdmi1: 'AAAAAgAAABoAAABaAw==',
-        Hdmi2: 'AAAAAgAAABoAAABbAw==',
-        Hdmi3: 'AAAAAgAAABoAAABcAw==',
-        Hdmi4: 'AAAAAgAAABoAAABdAw==',
-        TopMenu: 'AAAAAgAAABoAAABgAw==',
-        PopUpMenu: 'AAAAAgAAABoAAABhAw==',
-        OneTouchTimeRec: 'AAAAAgAAABoAAABkAw==',
-        OneTouchView: 'AAAAAgAAABoAAABlAw==',
-        DUX: 'AAAAAgAAABoAAABzAw==',
-        FootballMode: 'AAAAAgAAABoAAAB2Aw==',
-        iManual: 'AAAAAgAAABoAAAB7Aw==',
-        Netflix: 'AAAAAgAAABoAAAB8Aw==',
-        Assists: 'AAAAAgAAAMQAAAA7Aw==',
-        ActionMenu: 'AAAAAgAAAMQAAABLAw==',
-        Help: 'AAAAAgAAAMQAAABNAw==',
-        TvSatellite: 'AAAAAgAAAMQAAABOAw==',
-        WirelessSubwoofer: 'AAAAAgAAAMQAAAB+Aw=='
+        'AudioMixUp': 'AAAAAgAAABoAAAA8Aw==',
+        'AudioMixDown': 'AAAAAgAAABoAAAA9Aw==',
+        'PhotoFrame': 'AAAAAgAAABoAAABVAw==',
+        'Tv_Radio': 'AAAAAgAAABoAAABXAw==',
+        'SyncMenu': 'AAAAAgAAABoAAABYAw==',
+        'Hdmi1': 'AAAAAgAAABoAAABaAw==',
+        'Hdmi2': 'AAAAAgAAABoAAABbAw==',
+        'Hdmi3': 'AAAAAgAAABoAAABcAw==',
+        'Hdmi4': 'AAAAAgAAABoAAABdAw==',
+        'TopMenu': 'AAAAAgAAABoAAABgAw==',
+        'PopUpMenu': 'AAAAAgAAABoAAABhAw==',
+        'OneTouchTimeRec': 'AAAAAgAAABoAAABkAw==',
+        'OneTouchView': 'AAAAAgAAABoAAABlAw==',
+        'DUX': 'AAAAAgAAABoAAABzAw==',
+        'FootballMode': 'AAAAAgAAABoAAAB2Aw==',
+        'iManual': 'AAAAAgAAABoAAAB7Aw==',
+        'Netflix': 'AAAAAgAAABoAAAB8Aw==',
+        'Assists': 'AAAAAgAAAMQAAAA7Aw==',
+        'FeaturedApp': 'AAAAAgAAAMQAAABEAw==',
+        'FeaturedAppVOD': 'AAAAAgAAAMQAAABFAw==',
+        'GooglePlay': 'AAAAAgAAAMQAAABGAw==',
+        'ActionMenu': 'AAAAAgAAAMQAAABLAw==',
+        'Help': 'AAAAAgAAAMQAAABNAw==',
+        'TvSatellite': 'AAAAAgAAAMQAAABOAw==',
+        'WirelessSubwoofer': 'AAAAAgAAAMQAAAB+Aw=='
       };
     </script>
   </body>
