@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>草酸含量查询</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.css" />
+</head>
+
+<body>
+    <section class="section">
+        <div class="container">
+            <h1 class="title">
+                食品草酸含量查询
+            </h1>
+            <p class="subtitle">
+                来源: <a href="https://oxalate.org/">https://oxalate.org/</a>
+            </p>
+            <p class="subtitle">
+                建议每日低于60mg
+            </p>
+        </div>
+    </section>
+    <section class="section">
+        <div class="container">
+            <table id="data">
+                <thead>
+                    <tr>
+                        <th>英文名</th>
+                        <th>数量</th>
+                        <th>草酸含量</th>
+                        <th>来源</th>
+                        <th>中文名</th>
+                        <th>每100g草酸含量(mg)</th>
+                        <th>风险等级</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- JSON data will be displayed here -->
+                </tbody>
+            </table>
+        </div>
+    </section>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.0/dist/jquery.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.js"></script>
+<script>
+    $('#data').DataTable({
+        ajax: { url: 'https://raw.githubusercontent.com/jejer/oxalate_converter/main/result.json', dataSrc: "" },
+        columns: [
+            { data: "name" },
+            { data: "quantity" },
+            { data: "oxalate" },
+            { data: "source" },
+            { data: "chinese_name" },
+            { data: "oxalate_per_100g" },
+            { data: "risk" }
+        ],
+        columnDefs: [{
+            "defaultContent": "-",
+            "targets": "_all"
+        }]
+    });
+</script>
+
+</html>
