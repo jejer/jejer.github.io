@@ -115,7 +115,7 @@
 
         var result = signature;
         if (!dateInput.disabled) {
-            result = `${date};${signature}`;
+            result = `${btoa(date)}.${signature}`;
         }
         resultOutput.value = result;
     });
