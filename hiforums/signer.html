@@ -121,7 +121,7 @@
 
         var result = signature;
         if (!dateInput.disabled) {
-            result = `${date};${signature}`;
+            result = `${date}.${signature}`;
         }
         resultOutput.value = result;
     });
