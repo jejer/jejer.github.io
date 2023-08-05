@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>HiForum Signer</title>
+    <title>Hiforum Signer</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 </head>
 
@@ -12,7 +12,7 @@
     <section class="section">
         <div class="container">
             <h1 class="title">
-                HiForum Signer
+                Hiforum Signer
             </h1>
         </div>
     </section>
@@ -88,6 +88,8 @@
     const resultOutput = document.getElementById('result');
     const copyBtn = document.getElementById('copy');
 
+    keyInput.value = localStorage.getItem("key");
+
     disableDateSwitch.addEventListener('change', () => {
         if (disableDateSwitch.checked) {
             dateInput.disabled = true;
@@ -99,6 +101,7 @@
     signBtn.addEventListener('click', () => {
         const email = emailInput.value;
         const date = dateInput.value;
+        // const result = `Email: ${email}, Date: ${date}`;
         var input = email;
         if (!dateInput.disabled) {
             input = `${email};${date}`;
@@ -111,11 +114,14 @@
         const bytes = new Uint8Array(hex_string.match(/[\da-f]{2}/gi).map(h => parseInt(h, 16)));
         const signature = btoa(String.fromCharCode.apply(null, bytes));
         console.log(signature);
+        if ((signature?.trim()?.length || 0) > 0) {
+            localStorage.setItem("key", keyInput.value);
+        }
         signatureOutput.value = signature;
 
         var result = signature;
         if (!dateInput.disabled) {
-            result = `${btoa(date)}.${signature}`;
+            result = `${date};${signature}`;
         }
         resultOutput.value = result;
     });
